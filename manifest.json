@@ -1,0 +1,23 @@
+{
+  "name": "Boss is coming!",
+  "version": "1.0",
+  "description": "Type escape key 2 times or more. You can escape from active website immediately.",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/dash_16.png",
+      "32": "images/dash_32.png",
+      "128": "images/dash_128.png"
+    }
+  },
+  "icons": {
+    "16": "images/dash_16.png",
+    "32": "images/dash_32.png",
+    "128": "images/dash_128.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["jquery-3.3.1.js", "contentScript.js"]
+    }],
+  "manifest_version": 2
+}
